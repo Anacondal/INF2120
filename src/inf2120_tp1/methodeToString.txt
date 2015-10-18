@@ -1,0 +1,20 @@
+/**
+ * Permet d'obtenir une representation sous forme de chaine de caracteres
+ * de cette liste associative.
+ * @return une representation sous forme de chaine de caracteres de 
+ *         cette liste associative.
+ */
+@Override
+public String toString() {
+   String s = "";
+   if (cles.isEmpty()) {
+      s = "liste vide";
+   } else {
+      for (C cle : cles) {
+         s = s + cle + " -> ";
+         s = s + obtenirElements(cle) + "\n";
+      }
+      s = s.substring(0, s.length() - 1);
+   }
+   return s;
+}
